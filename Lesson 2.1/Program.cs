@@ -10,7 +10,17 @@ namespace Lesson_2._1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hi");
+            string login = "log";
+            string name = "Ivan";
+            string surname = "Ivanov";
+            int age = 18;
+
+            User user = new User();
+            User user2 = new User(login,name,surname,age);
+
+            Console.WriteLine(user.date); 
+
+            Console.ReadKey();
         }
     }
 }
