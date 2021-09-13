@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lesson_1._4
+﻿namespace Lesson_1._4
 {
     class Point
     {
-        private int x,y;
+        private int x, y;
         private string name;
 
         public int X

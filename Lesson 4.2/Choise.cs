@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lesson_4._2
 {
@@ -10,19 +6,23 @@ namespace Lesson_4._2
     {
         AbstractHandler abs;
 
-        public void ChooseDocument (string filename)
+        public void ChooseDocument(string filename)
         {
             string str = filename.Substring(filename.Length - 4);
 
             switch (str.ToLower())
             {
-                case ".doc": abs = new DOCHandler(filename);
+                case ".doc":
+                    abs = new DOCHandler(filename);
                     break;
-                case ".txt": abs = new TXTHandler(filename);
+                case ".txt":
+                    abs = new TXTHandler(filename);
                     break;
-                case ".xml": abs = new XMLHandler(filename);
+                case ".xml":
+                    abs = new XMLHandler(filename);
                     break;
-                default: Console.WriteLine("net takogo");
+                default:
+                    Console.WriteLine("net takogo");
                     break;
             }
 

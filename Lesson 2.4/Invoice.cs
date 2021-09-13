@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lesson_2._4
 {
     class Invoice
     {
 
-        int account; 
+        int account;
         string customer, provider;
         string article;
         int quantity;
 
-        public Invoice (int account, string customer, string provider)
+        public Invoice(int account, string customer, string provider)
         {
             this.account = account;
             this.customer = customer;
@@ -24,7 +20,7 @@ namespace Lesson_2._4
         public int Quantity { get => quantity; set => quantity = value; }
         public string Article { get => article; set => article = value; }
 
-        public void CostCalc (bool nds)
+        public void CostCalc(bool nds)
         {
             double cost;
             switch (Article)   //Оператор многозначного выбора
@@ -42,12 +38,12 @@ namespace Lesson_2._4
                     Console.WriteLine("Нет ифформации о таком товаре");
                     return;
             }
-                  if (nds)  
-                    {
-                        cost = cost * 7 / 6;
-                    }
-                    Console.WriteLine("Cуммa оплаты: {0}$", cost * Quantity); 
+            if (nds)
+            {
+                cost = cost * 7 / 6;
             }
+            Console.WriteLine("Cуммa оплаты: {0}$", cost * Quantity);
         }
-    
+    }
+
 }

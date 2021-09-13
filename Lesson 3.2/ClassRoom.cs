@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lesson_3._2
 {
@@ -39,12 +35,12 @@ namespace Lesson_3._2
         }
 
         public Pupil GeneratePupil()
-        { 
-            int r = rand.Next(1,4);
+        {
+            int r = rand.Next(1, 4);
 
-            switch(r)
+            switch (r)
             {
-                case 1: 
+                case 1:
                     return new ExcelentPupil();
                 case 2:
                     return new GoodPupil();
@@ -57,7 +53,7 @@ namespace Lesson_3._2
         {
             foreach (Pupil p in pupil)
             {
-                p.Study(); 
+                p.Study();
             }
         }
         public void Write()

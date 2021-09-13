@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lesson_7._2
 {
@@ -22,9 +18,19 @@ namespace Lesson_7._2
 
                 Console.Write("Введите дату отправления:");
                 d = Console.ReadLine();
-                DateTime date = string.IsNullOrEmpty(d) ? DateTime.Now : DateTime.Parse(d);
+                try
+                {
+                    DateTime date = string.IsNullOrEmpty(d) ? DateTime.Now : DateTime.Parse(d);
+                    train[i] = new Train(punkt, nomer, date); //Создание нового екземпляра класса Train и присвоение ссылки на него в массив train
+                }
+                catch (Exception)
+                {
+                    DateTime date = DateTime.Now;
+                    train[i] = new Train(punkt, nomer, date); //Создание нового екземпляра класса Train и присвоение ссылки на него в массив train
+                }
+                
 
-                train[i] = new Train(punkt, nomer, date); //Создание нового екземпляра класса Train и присвоение ссылки на него в массив train
+                
             }
         }
         public static void Show(Train[] train)

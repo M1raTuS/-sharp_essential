@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Статические и вложенные классы
+ 
+Используя Visual Studio, создайте проект по шаблону Console Application.  
+Требуется:  
+Создать статический класс FindAndReplaceManager с методом void FindNext(string str) для поиска по книге. 
+При вызове этого метода, производится последовательный поиск строки в книге. */
+
+using System;
 
 namespace Lesson_6._2
 {
-    
-    
+
+
 
     internal static class FindAndReplaceManager
     {
@@ -25,7 +28,7 @@ namespace Lesson_6._2
             Console.WriteLine("Поиск строки : " + str); //Отобразит строку с указанным ключом для поиска
         }
     }
-   
+
 
     class Program
     {

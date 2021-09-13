@@ -1,52 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lesson_4._1
+﻿namespace Lesson_4._1
 {
     class Document
     {
-       
-            Part title = null;
-            Part body = null;
-            Part footer = null;
 
-            void InitializeDocument()
-            {
-                this.title = new Title();
-                this.body = new Body();
-                this.footer = new Footer();
-            }
+        Part title = null;
+        Part body = null;
+        Part footer = null;
 
-            public Document(string title)
-            {
-                InitializeDocument();
-                this.title.Content = title;
-            }
+        void InitializeDocument()
+        {
+            this.title = new Title();
+            this.body = new Body();
+            this.footer = new Footer();
+        }
 
-            public void Show()
-            {
-                this.title.Show();
-                this.body.Show();
-                this.footer.Show();
-            }
+        public Document(string title)
+        {
+            InitializeDocument();
+            this.title.Content = title;
+        }
 
-            public string Body
-            {
-                set
-                {
-                    this.body.Content = value;
-                }
-            }
+        public void Show()
+        {
+            this.title.Show();
+            this.body.Show();
+            this.footer.Show();
+        }
 
-            public string Footer
+        public string Body
+        {
+            set
             {
-                set
-                {
-                    this.footer.Content = value;
-                }
+                this.body.Content = value;
             }
         }
+
+        public string Footer
+        {
+            set
+            {
+                this.footer.Content = value;
+            }
+        }
+    }
 }

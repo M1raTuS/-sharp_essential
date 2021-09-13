@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Статические и вложенные классы
+ 
+Используя Visual Studio, создайте проект по шаблону Console Application.  
+Cоздайте в классе Book, вложенный класс Notes, который позволит сохранять заметки читателя. */
+
+using System;
 
 namespace Lesson_6._3
 {
     class Program
     {
-        
+
 
         public class Book //Класс Book
         {

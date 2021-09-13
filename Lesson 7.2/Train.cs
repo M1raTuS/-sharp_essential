@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lesson_7._2
 {
@@ -18,8 +14,8 @@ namespace Lesson_7._2
             this.number = number;
             this.time = time;
         }
-        public string Name 
-        { 
+        public string Name
+        {
             get { return name; }
         }
         public int Number

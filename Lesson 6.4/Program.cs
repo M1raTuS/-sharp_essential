@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Статические и вложенные классы
+ 
+Используя Visual Studio, создайте проект по шаблону Console Application.  
+Требуется: создать расширяющий метод для целочисленного массива, который сортирует элементы массива по возрастанию. */
+
+using System;
 
 namespace Lesson_6._4
 {
@@ -24,20 +25,20 @@ namespace Lesson_6._4
             {
                 Console.WriteLine(q);
             }
-            
+
             Console.ReadKey();
         }
     }
-     static class MassiveExtension
+    static class MassiveExtension
     {
         public static void SortUp(this int[] mass)
         {
             int temp = 0;
             for (int i = 0; i < mass.Length; i++)
             {
-                for (int j = 0; j < mass.Length-1; j++)
+                for (int j = 0; j < mass.Length - 1; j++)
                 {
-                    if (mass[j] > mass[j+1])
+                    if (mass[j] > mass[j + 1])
                     {
                         temp = mass[j + 1];
                         mass[j + 1] = mass[j];

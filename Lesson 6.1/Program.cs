@@ -1,8 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Статические и вложенные классы
+ 
+Используя Visual Studio, создайте проект по шаблону Console Application.  
+Требуется:  
+Создать статический класс Calculator, с методами для выполнения основных арифметических операций. 
+Написать программу, которая выводит на экран основные арифметические операции. */
+
+using System;
 
 namespace Lesson_6._1
 {
@@ -15,8 +18,6 @@ namespace Lesson_6._1
             Console.WriteLine(Calculator.Mul(5, 2));
             Console.WriteLine(Calculator.Div(5, 2));
             Console.ReadKey();
-            
-
         }
     }
 }

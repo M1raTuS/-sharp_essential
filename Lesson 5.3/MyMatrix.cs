@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lesson_5._3
 {
@@ -30,15 +26,15 @@ namespace Lesson_5._3
                 Console.WriteLine("Неверно заданы координаты конечной точки");
                 return;
             }
-            if (startRow + endRow > matrix.Length || startCol+ endCol > matrix[0].Length) 
+            if (startRow + endRow > matrix.Length || startCol + endCol > matrix[0].Length)
             {
                 Console.WriteLine("Неверно заданы координаты");
                 return;
             }
-            for (int i = startRow; i < endRow+ startRow; ++i)
+            for (int i = startRow; i < endRow + startRow; ++i)
             {
-                for (int j = startCol; j < endCol+ startCol; ++j)
-                    Console.Write("{0}  ", matrix[i][j]); 
+                for (int j = startCol; j < endCol + startCol; ++j)
+                    Console.Write("{0}  ", matrix[i][j]);
                 Console.Write("\n");
             }
         }
@@ -69,6 +65,22 @@ namespace Lesson_5._3
                 return;
             }
             matrix[Row][Col] = 11;
+        }
+
+        public void Change(int Row, int Col, int Numb)
+        {
+            if (Row < 0 || Col < 0) //Проверка валидности полученных аргументов       || Row > matrix.Length || Col > matrix[0].Length
+            {
+                Console.WriteLine("Попытка обращения за пределы массива.");
+                return;
+            }
+
+            if (Row > matrix.Length || Col > matrix[0].Length)
+            {
+                Console.WriteLine("Неверно заданы координаты");
+                return;
+            }
+            matrix[Row][Col] = Numb;
         }
 
 

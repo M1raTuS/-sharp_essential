@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Массивы и индексаторы
+ 
+Расширьте русско-английский словарь еще и украинским словарем. 
+Реализуйте возможность поиска не только по ключевым русским словам и словам на остальных языках.*/
+
+using System;
 
 namespace Lesson_5._1
 {

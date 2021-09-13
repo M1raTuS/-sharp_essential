@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lesson_1._3
 {
-     class Content 
+    class Content
     {
         readonly string content;
 
@@ -14,13 +10,13 @@ namespace Lesson_1._3
         {
             this.content = content;
         }
-       
+
         public void Show()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(content);
         }
 
-       
+
     }
 }

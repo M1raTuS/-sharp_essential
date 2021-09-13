@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lesson_5._2
 {
     class Array
     {
-        
+
         long sum = 0;
         private int[] massive;
 
@@ -22,7 +19,7 @@ namespace Lesson_5._2
             }
         }
 
-        public void Max ()
+        public void Max()
         {
             Console.WriteLine(massive.Max());
         }
@@ -32,7 +29,7 @@ namespace Lesson_5._2
         }
         public void Sum()
         {
-            foreach(int t in massive)
+            foreach (int t in massive)
             {
                 sum += t;
             }
@@ -40,7 +37,11 @@ namespace Lesson_5._2
         }
         public void Middle()
         {
-            Console.WriteLine(sum/(massive.Length));
+            if (sum == 0)
+            {
+                Sum();
+            }
+            Console.WriteLine(sum / (massive.Length));
         }
         public void ne4()
         {

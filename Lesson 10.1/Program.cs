@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Универсальные шаблоны 
+ 
+Используя Visual Studio, создайте проект по шаблону Console Application.  
+Создайте класс MyClass<T>, содержащий статический фабричный метод – T FacrotyMethod(), 
+который будет порождать экземпляры типа, указанного в качестве параметра типа (указателя места заполнения типом – Т). */
+
+using System;
 
 namespace Lesson_10._1
 {
@@ -10,11 +12,11 @@ namespace Lesson_10._1
     {
         static void Main(string[] args)
         {
-            int i = MyClass<int>.FacrotyMethod(); 
+            int i = MyClass<int>.FacrotyMethod();
 
-            Console.WriteLine(i.GetType().Name); 
+            Console.WriteLine(i.GetType().Name);
 
-            Program p = MyClass<Program>.FacrotyMethod(); 
+            Program p = MyClass<Program>.FacrotyMethod();
 
             Console.WriteLine(p.GetType().Name);
 
@@ -28,7 +30,7 @@ namespace Lesson_10._1
 
     class MyClass<T> where T : new()
     {
-        public static T FacrotyMethod() 
+        public static T FacrotyMethod()
         {
             return new T();
         }

@@ -1,8 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*Классы и объекты
+
+Используя Visual Studio, создайте проект по шаблону Console Application.
+Требуется:  
+Создать класс с именем Address.
+В теле класса требуется создать поля: index, country, city, street, house, apartment.Для каждого поля, создать свойство с двумя методами доступа.  
+Создать экземпляр класса Address.  
+В поля экземпляра записать информацию о почтовом адресе.  Выведите на экран значения полей, описывающих адрес. */
+
+
+
+using System;
 
 namespace Lesson_1._1
 {
@@ -17,7 +24,7 @@ namespace Lesson_1._1
             address.City = "Dnepr";
             address.Street = "Kalinovaya";
             address.House = 79;
-            address.Apartament = 59;
+            address.Apartament = 19;
 
             Console.WriteLine(address.Index);
             Console.WriteLine(address.Country);

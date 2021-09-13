@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lesson_4._2
 {
@@ -19,16 +15,16 @@ namespace Lesson_4._2
         {
             Console.WriteLine(fileName + " открыт");
         }
-         public void Create()
+        public void Create()
         {
             Console.WriteLine(fileName + " создан");
         }
-         public void Change()
+        public void Change()
         {
             Console.WriteLine(fileName + " отредактирован");
         }
         public abstract void Save();
-        
-        
+
+
     }
 }

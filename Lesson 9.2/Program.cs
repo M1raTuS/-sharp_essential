@@ -1,8 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Делегаты 
+ 
+Используя Visual Studio, создайте проект по шаблону Console Application.  
+Создайте четыре лямбда оператора для выполнения арифметических действий: (Add – сложение, Sub – вычитание, Mul – умножение, Div – деление).
+Каждый лямбда оператор должен принимать два аргумента и возвращать результат вычисления. 
+Лямбда оператор деления должен делать проверку деления на ноль.  
+Написать программу, которая будет выполнять арифметические действия, указанные пользователем.  */
+
+using System;
 
 namespace Lesson_9._2
 {
@@ -23,7 +27,7 @@ namespace Lesson_9._2
 
             MyDelegate op = null;
 
-            switch (z) 
+            switch (z)
             {
                 case "+":
                     op = (x, y) => { return x + y; };
@@ -52,10 +56,10 @@ namespace Lesson_9._2
                     Console.WriteLine("Вы неправильно ввели знак операции!");
                     break;
             }
-            Console.WriteLine(new string('-', 30)); 
-            if (op != null) 
-                Console.WriteLine("{0:##.###}", op(a, b)); 
-          
+            Console.WriteLine(new string('-', 30));
+            if (op != null)
+                Console.WriteLine("{0:##.###}", op(a, b));
+
             Console.ReadKey();
         }
     }

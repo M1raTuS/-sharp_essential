@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lesson_1._2
 {
@@ -17,8 +13,8 @@ namespace Lesson_1._2
         }
 
         private double AreaCalculator()
-        { 
-            return (Convert.ToDouble(side1) * Convert.ToDouble(side2)); 
+        {
+            return (Convert.ToDouble(side1) * Convert.ToDouble(side2));
         }
 
         private double PerimeterCalculator()

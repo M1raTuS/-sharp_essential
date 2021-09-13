@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lesson_6._1
+﻿namespace Lesson_6._1
 {
     static class Calculator
     {
-        static public  int Add (int a, int b)
+        static public int Add(int a, int b)
         {
             return a + b;
         }

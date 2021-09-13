@@ -1,9 +1,11 @@
-﻿using Microsoft.Win32;
+﻿/* Универсальные шаблоны 
+
+Используя Visual Studio, создайте проект по шаблону Console Application.  
+Создайте класс MyList<T>. Реализуйте в простейшем приближении возможность использования его экземпляра аналогично экземпляру класса List<T>. 
+Минимально требуемый интерфейс взаимодействия с экземпляром, должен включать метод добавления элемента, 
+индексатор для получения значения элемента по указанному индексу и свойство только для чтения для получения общего количества элементов.   */
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lesson_10._2
 {
@@ -11,63 +13,52 @@ namespace Lesson_10._2
     {
         static void Main(string[] args)
         {
-            var t = "SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\v2.0.50727\\NGenService\\Roots";
-            RegistryKey[] key = {Registry.ClassesRoot,Registry.CurrentConfig,
-                                   Registry.LocalMachine, Registry.CurrentUser,Registry.Users};
+            Console.WriteLine("Введите размерность массива:");
+            string str = Console.ReadLine();
+            int u = string.IsNullOrEmpty(str) ? 0 : Convert.ToInt32(str);
 
-            foreach (var rk in Registry.LocalMachine.GetSubKeyNames())
+            var list = new MyList<int>();
+
+            var t = new Random();
+            for (int x = 0; x < u; x++)
             {
-                var q = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64).OpenSubKey(t,true);
-                Console.WriteLine(rk);
-                if (rk.Contains("SOFTWARE"))
-                {
-                    Console.WriteLine(new string('-', 50));
-                    foreach (var qw in q.GetSubKeyNames())
-                    {
-                        var s = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64).OpenSubKey(t + "\\" + qw,true);
-                        try
-                        {
-                            if (s.ToString().Contains("Management Studio"))
-                            {
-                                Console.WriteLine(s.ToString());
-                                Console.WriteLine(q);
-                                Console.WriteLine(qw);
-
-                                q.DeleteSubKey(qw,true);
-                                break;
-                            }
-                           
-                            string asd = "5C5F996FD13E5C2418C586214B9E6958";
-                           var ss = s.GetValue(asd, "no");
-                            if (!(ss.Equals("no")))
-                            {
-                                Console.WriteLine(ss);
-                                //Console.WriteLine(s.ToString());
-                                //s.DeleteValue(asd, true);
-                                //Console.WriteLine(ss);
-
-                            }
-                        }
-                        catch (Exception e)
-                        {
-                            Console.WriteLine(e);
-                            break;
-                            
-                        }
-                        
-                        if (false)
-                        {
-                            
-                        }
-                        
-                    }
-                    Console.WriteLine(new string('-', 50));
-                }
+                list.Add(t.Next(100));
             }
-            
+
+            Console.WriteLine("Массив элементов:");
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.Write(list[i] + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine(new string('-', 30));
+            try
+            {
+                Console.WriteLine("Введите значение для поиска:");
+                if (list.Contains(Convert.ToInt32(Console.ReadLine())))
+                {
+                    Console.WriteLine("Введенное значение содержится в массиве");
+                }
+                else
+                {
+                    Console.WriteLine("Значение не найдено!");
+                }
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Вы ввели неправильные данные");
+            }
+           
+            Console.WriteLine();
+            if (list.Count > 0)
+            {
+                Console.WriteLine(list[0].ToString());
+            }
+
             Console.ReadKey();
+
         }
-       // Microsoft SQL Server Management Studio 18
 
     }
 }

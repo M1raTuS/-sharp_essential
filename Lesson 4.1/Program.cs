@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Абстрактные классы и интерфейсы
+ 
+Задание Используя Visual Studio, создайте проект по шаблону Console Application.  
+Требуется: Изменить Lesson 1.2  и создать общий абстрактный класс для всех частей документа. */
+
+using System;
 
 namespace Lesson_4._1
 {
